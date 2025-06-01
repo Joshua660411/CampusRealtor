@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Join Campus Realtor</title>
+  <link rel="stylesheet" href="join.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <!-- Navbar without Join button -->
+  <div class="navbar">
+    <h2 class="logo">CAMPUS REALTOR</h2>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">MISSION & VISION</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="logo-center">
+    <img src="yellowlogo.png" alt="Campus Realtor Logo" />
+  </div>
+
+  <div class="join-container">
+    <h1>JOIN CAMPUS REALTOR</h1>
+
+    <form id="join-form" action="https://formsubmit.co/joshualavistoepic@gmail.com" method="POST">
+      <!-- For local Live Server, use your full local URL below -->
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500//thankyou.html" />
+      <input type="hidden" name="_captcha" value="false" />
+      
+      <label for="firstName">First Name*</label>
+      <input type="text" id="firstName" name="First Name" required />
+
+      <label for="middleName">Middle Name (optional)</label>
+      <input type="text" id="middleName" name="Middle Name" />
+
+      <label for="lastName">Last Name*</label>
+      <input type="text" id="lastName" name="Last Name" required />
+
+      <label for="schedule">Schedule Set*</label>
+      <input type="datetime-local" id="schedule" name="Schedule" required />
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="Email" required />
+
+      <label for="phone">Phone Number*</label>
+      <input type="tel" id="phone" name="Phone Number" required />
+
+      <label for="talent">What is your super power?*</label>
+      <textarea id="talent" name="Super Power" rows="3" required></textarea>
+
+      <button type="submit" class="join-btn">Join</button>
+    </form>
+
+    <button class="back-btn" onclick="window.history.back()">Back</button>
+  </div>
+</body>
+</html>

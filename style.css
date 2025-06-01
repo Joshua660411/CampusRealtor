@@ -1,0 +1,223 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #1d2976;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  background: #2f3ea6;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  padding: 25px 30px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1300px;
+  z-index: 100;
+  position: relative;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.menu ul li a:hover {
+  color: yellow;
+}
+
+.menu ul li a:active {
+  color: #2f3ea6;
+}
+
+.join-btn .btn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.join-btn .btn:hover {
+  background: rgb(255, 193, 61);
+  color: #1d2976;
+}
+
+.join-btn .btn:active {
+  background-color: #1d2976;
+  color: rgb(255, 193, 61);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  text-align: center;
+  position: relative;
+}
+
+.logo-center img {
+  position: absolute;
+  top: -100px;
+  right: 80px;
+  width: 120px;
+}
+
+.df {
+  background: #20b2aa;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px 100px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.df:hover {
+  background: rgb(255, 193, 61);
+  color: #1d2976;
+}
+
+.df:active {
+  opacity: 0.5;
+}
+
+.title h1 {
+  font-size: 10vw;
+  line-height: 1;
+  font-family: 'Franklin Gothic Medium';
+}
+
+.white {
+  color: white;
+}
+
+.yellow {
+  color: rgb(255, 193, 61);
+}
+
+.content {
+  padding: 50px;
+  min-height: 1000px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .logo-center img {
+    top: 100px;
+    right: 20px;
+    width: 80px;
+  }
+
+  .logo-center img:hover {
+    opacity: 0.8;
+  }
+
+  .df {
+    font-size: 6vw;
+    padding: 10px 20px;
+  }
+
+  .title h1 {
+    font-size: 10vw;
+  }
+}
+
+

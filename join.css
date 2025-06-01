@@ -1,0 +1,168 @@
+/* Base & Background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #1d2976;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  padding: 25px 30px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1300px;
+  z-index: 100;
+  position: relative;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.menu ul li a:hover {
+  color: yellow;
+}
+
+.menu ul li a:active {
+  color: #2f3ea6;
+}
+
+/* Logo center */
+.logo-center img {
+  position: absolute;
+  top: 25px;
+  right: 80px;
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .logo-center img {
+    position: static;
+    display: block;
+    margin: 20px auto;
+    width: 80px;
+  }
+  .menu {
+    display: none;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Join Form */
+.join-container {
+  max-width: 600px;
+  margin: 100px auto 50px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.join-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+}
+
+.join-container h1:hover {
+    color: #ffd900;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid rgb(255, 193, 61);
+}
+
+.join-btn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.join-btn:hover {
+  background: rgb(255, 193, 61);
+  color: #1d2976;
+}
+
+.join-btn:active {
+  background-color: #1d2976;
+  color: rgb(255, 193, 61);
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid rgb(255, 193, 61);
+  color: rgb(255, 193, 61);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.back-btn:hover {
+  background: rgb(255, 193, 61);
+  color: #1d2976;
+}
+
+/* Message output */
+#message {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
